@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-register">
+    <header
+      class="position-fixed header d-flex px-4 justify-content-center flex-column align-items-center w-100"
+    >
+      <nav
+        id="nav"
+        class="d-inline-flex container justify-content-between align-items-center shadow-sm nav"
+      >
+        <div class="d-flex justify-content-between w-100 align-items-center">
+          <div>
+            <img src="static/new/navbar.png" alt="logo" />
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="index.html/about">Tentang Program</a>
+            </li>
+            <li>
+              <a href="index.html/news">Berita</a>
+            </li>
+            <li>
+              <a
+                href="https://event.detik.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  type="button"
+                  aria-label="registrasi"
+                  class="rounded-pill nav-btn"
+                >
+                  Registrasi
+                </button>
+              </a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            aria-label="open close nav"
+            class="rounded-full bg-white shadow-sm open-category-btn"
+            onclick="openCloseNav()"
+          >
+            <img
+              id="open-close-nav-icon"
+              src="static/new/menu.svg"
+              alt="open close nav icon"
+            />
+          </button>
+        </div>
+      </nav>
+      <ul id="nav-menu-mobile" class="container nav-menu-mobile">
+        <li class="nav-menu-mobile-list">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav-menu-mobile-list">
+          <a href="#about">Tentang Program</a>
+        </li>
+        <li class="nav-menu-mobile-list">
+          <a href="#news">Berita</a>
+        </li>
+        <li class="nav-menu-mobile-list">
+          <a
+            href="https://event.detik.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              type="button"
+              aria-label="registrasi"
+              class="rounded-pill w-100 nav-btn"
+            >
+              Registrasi
+            </button>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <h2 class="title">
+      Registrasi
+      <p>Lengkapi data diri kamu dengan benar</p>
+    </h2>
+
+    <div class="container mx-auto mt-20 px-6">
+      <div
+        class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-md mx-auto"
+      >
+        <form>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="fullname"
+            >
+              Nama lengkap*
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="fullname"
+              type="text"
+              placeholder="Nama lengkap"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              Email*
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="phone"
+            >
+              Nomor Telepon*
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="phone"
+              type="tel"
+              placeholder="Isi hanya angka"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="reason"
+            >
+              Alasan mengikuti program "Explore Thailand by Detiktravel"*
+            </label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="reason"
+              rows="3"
+              placeholder="Tuliskan alasan"
+            ></textarea>
+          </div>
+
+          <div class="mb-4 flex items-start">
+            <div class="w-2/4">
+              <label class="block text-gray-700 text-sm font-bold mb-3">
+                Upload foto profil*
+              </label>
+              <div
+                class="border-dashed border-2 border-gray-400 rounded-lg p-4 flex justify-center items-center h-32"
+              >
+                <input type="file" class="hidden" id="profile-pic" />
+                <label for="profile-pic" class="cursor-pointer">
+                  <svg
+                    class="w-12 h-12 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    ></path>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="w-2/4 ml-3 mt-10 flex flex-col justify-center">
+              <div class="text-left">
+                <p class="text-sm text-gray-700">
+                  Format file: .png, .jpg, .jpeg
+                </p>
+                <p class="text-sm text-gray-700">Maksimal ukuran file 1MB</p>
+                <p class="text-sm text-gray-700">
+                  Disarankan foto mencakup 3/4 badan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="instagram"
+            >
+              Link Instagram*
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="instagram"
+              type="url"
+              placeholder="https://www.instagram.com/yourusername"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="flex items-center">
+              <input
+                type="checkbox"
+                class="form-checkbox text-blue-500 h-5 w-5"
+              />
+              <span class="ml-2 text-gray-700 text-sm"
+                >Dengan menekan tombol "Daftar", Saya menyetujui
+                <a href="#" class="text-blue-500">syarat dan ketentuan</a> yang
+                berlaku</span
+              >
+            </label>
+          </div>
+
+          <div class="text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Daftar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br />
+
+    <!-- footer -->
+    <footer class="footer w-100 text-white">
+      <img src="static/new/Asset White.png" alt="logo footer" loading="lazy" />
+      <div class="w-100">
+        <div
+          class="d-flex justify-content-between footer-content w-100 border-b-2"
+        >
+          <div class="footer-description mt-4">
+            <p>
+              Bergabunglah dalam "Explore Thailand bersama Detiktravel"!
+              Kompetisi ini terbuka bagi pembaca Detiktravel yang ingin
+              menikmati perjalanan ke Thailand. Kunjungi destinasi menakjubkan
+              seperti pantai Pak Bia Island dan destinasi lain di Phuket,
+              Thailand. Jadi bagian dari perjalanan kami dan menangkan hadiah
+              jalan-jalan yang tak terlupakan!
+            </p>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <span>Connect with Us</span>
+            <ul class="d-flex social-media-list mt-2 gap-2">
+              <li>
+                <a href=""></a
+                ><img
+                  src="static/images/facebook.svg"
+                  alt="facebook"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <a href=""></a
+                ><img src="static/images/x.svg" alt="x" loading="lazy" />
+              </li>
+              <li>
+                <a href=""></a
+                ><img
+                  src="static/images/instagram.svg"
+                  alt="instagram"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <a href=""></a
+                ><img
+                  src="static/images/linkedin.svg"
+                  alt="linkedin"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <a href=""></a
+                ><img
+                  src="static/images/youtube.svg"
+                  alt="youtube"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          Copyright @ 2023 detikcom. All right reserved
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
