@@ -11,4 +11,4 @@ This microsite is intended as a source of information regarding the campaign tha
 
 ## Preview
 
-[Website](https://detikcom-frontenddesignassignment-haikelilhamhakim.pages.dev/)
+[Website]([https://detikcom-frontenddesignassignment-haikelilhamhakim.pages.dev/](https://detikcom-frontend-design-assignment-three.vercel.app/))
